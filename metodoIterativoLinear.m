@@ -1,15 +1,12 @@
-%Encontra um zero da funcao fx dentro do intervalo [a,b].
 %f(x)= d(x)-x=0
 %d(x)=x
-%disp
 function raiz = metodoIterativoLinear()
     fx=@(x)(x^2)*sin(x)+cos(x);
     dx=@(x)sqrt(-cot(x));
     
-    
     x0=0.5;
     precisao=0.001;
-    Nmax=6;
+    Nmax=20;
     
     i=0;
     while(true)
@@ -23,6 +20,5 @@ function raiz = metodoIterativoLinear()
             break;
         end
     end
-    fprintf('Raiz: %f - Iterações:%d \n',x,i);
     raiz = x;
 end
