@@ -2,7 +2,7 @@
 %d(x)=x
 function raiz = metodoIterativoLinear()
     fx=@(x)(x^2)*sin(x)+cos(x);
-    dx=@(x)sqrt(-cot(x));
+    hx=@(x)sqrt(-cot(x));
     
     x0=0.5;
     precisao=0.001;
@@ -10,7 +10,7 @@ function raiz = metodoIterativoLinear()
     
     i=0;
     while(true)
-        x=subs(dx,x0);
+        x=subs(hx,x0);
         E=abs(x-x0);
         x0=x;
         i=i+1;
