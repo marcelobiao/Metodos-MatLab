@@ -1,10 +1,11 @@
-%f
+%
 function raiz = metodoNewtonRaphson()
-    fx=@(x)(x^2)*sin(x)+cos(x);
-    %TODO: Derivada e estimativa inicial.
-    %dfx=Calcular derivada de fx;
-    %x0=Definir;
-
+    syms x(y);
+    fx=(x^2)*sin(x)+cos(x);
+    dfx=functionalDerivative(fx,x);
+    %TODO: Arrumar derivada
+    
+    x0=0.5;
     precisao=0.001;
     Nmax=20;
     
