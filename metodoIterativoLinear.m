@@ -1,24 +1,25 @@
 %f(x)= d(x)-x=0
 %d(x)=x
 function raiz = metodoIterativoLinear()
-    fx=@(x)(x^2)*sin(x)+cos(x);
-    hx=@(x)sqrt(-cot(x));
+    syms x;
+    fx=(x^2)*sin(x)+cos(x);
+    hx=sqrt(-cot(x));
     
     x0=0.5;
     precisao=0.001;
     Nmax=20;
     
-    i=0;
+    i=0;        
+    raiz=[];
     while(true)
         x=subs(hx,x0);
         E=abs(x-x0);
         x0=x;
         i=i+1;
-        
-        fprintf('X: %f - E: %f - Iterações:%d \n',x,E,i);
+       
+        raiz=[raiz,x];
         if((E<=precisao) || (i>=Nmax))
             break;
         end
     end
-    raiz = x;
 end

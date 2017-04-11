@@ -1,4 +1,6 @@
-raizIterativoLinear = metodoIterativoLinear();
-fprintf('Raiz: %f\n',raizIterativoLinear);
-raizBissecao = metodoBissecao();
-fprintf('Raiz: %f\n',raizBissecao);
+%raizIterativoLinear = metodoIterativoLinear();
+%fprintf('RaizLi: %f\n',raizIterativoLinear);
+%raizBissecao = metodoBissecao();
+%fprintf('RaizBi: %f\n',raizBissecao);
+raizNewtonRaphson = metodoNewtonRaphson();
+fprintf('RaizBi: %f\n',raizNewtonRaphson);
