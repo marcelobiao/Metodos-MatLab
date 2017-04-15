@@ -3,9 +3,12 @@
 function raiz = metodoIterativoLinear()
     syms x;
     fx=(x^2)*sin(x)+cos(x);
-    hx=sqrt(-cot(x));
+    %hx=sqrt(-cot(x));
+    %hx=asin(-cos(x)/(x^2));
+    %hx=-cos(x)/(x*sin(x));
+    %hx=acos(-(x^2)*sin(x));
     
-    x0=0.5;
+    x0=3;
     precisao=0.001;
     Nmax=20;
     
@@ -18,6 +21,7 @@ function raiz = metodoIterativoLinear()
         i=i+1;
        
         raiz=[raiz,x];
+        fprintf('E: %f - x0: %f - I: %f\n',E, x0,i);
         if((E<=precisao) || (i>=Nmax))
             break;
         end
