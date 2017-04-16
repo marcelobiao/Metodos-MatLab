@@ -3,7 +3,7 @@ function raiz = metodoBissecao()
     syms x;
     fx=(x^2)*sin(x)+cos(x);
     a = -2;
-    b = 3;
+    b = 2;
     precisao = 0.01;
     
     raiz=[];

@@ -3,14 +3,22 @@
 function raiz = metodoIterativoLinear()
     syms x;
     fx=(x^2)*sin(x)+cos(x);
-    %hx=sqrt(-cot(x));
-    %hx=asin(-cos(x)/(x^2));
-    %hx=-cos(x)/(x*sin(x));
-    %hx=acos(-(x^2)*sin(x));
     
-    x0=3;
+    %hx=sqrt(-cot(x));
+    %(csc^2(x))/(2 sqrt(-cot(x)))
+    
+    %hx=asin(-cos(x)/(x^2));
+    %-(-(2 cos(x))/x^3 - (sin(x))/x^2)/sqrt(1 - (cos^2(x))/x^4)
+    
+    hx=1/(cos((-(x^2)*sin(x))));
+    %-(-x^2 cos(x) - 2 x sin(x))/sqrt(1 - x^4 sin^2(x))
+    
+    %hx=(-cot(x)/x);
+    %(cot(x) + x csc^2(x))/x^2
+    
+    x0=-6;
     precisao=0.001;
-    Nmax=20;
+    Nmax=10;
     
     i=0;        
     raiz=[];
