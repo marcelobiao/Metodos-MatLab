@@ -4,9 +4,12 @@ function raiz = metodoBissecao()
     fx=(x^2)*sin(x)+cos(x);
     a = -2;
     b = 2;
+    
     precisao = 0.01;
+    Nmax=15;
     
     raiz=[];
+    i=0;
     while(true)
         c = (a+b)/2;
         
@@ -17,7 +20,8 @@ function raiz = metodoBissecao()
         end   
         
         raiz=[raiz,c];
-        if((abs(subs(fx,c))<=precisao))
+        i=i+1;
+        if((abs(subs(fx,c))<=precisao) || (i>=Nmax))
             break;
         end
     end

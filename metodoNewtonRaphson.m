@@ -8,7 +8,7 @@ function raiz = metodoNewtonRaphson()
     
     x0=-1;
     precisao=0.001;
-    Nmax=20;
+    Nmax=15;
     
     i=0;
     raiz=[];

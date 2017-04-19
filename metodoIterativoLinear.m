@@ -18,7 +18,7 @@ function raiz = metodoIterativoLinear()
     
     x0=-6;
     precisao=0.001;
-    Nmax=10;
+    Nmax=15;
     
     i=0;        
     raiz=[];
