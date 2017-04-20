@@ -3,8 +3,6 @@ function raiz = metodoNewtonRaphson()
     syms x;
     fx=(x^2)*sin(x)+cos(x);
     dfx=diff(fx,x);
-
-    %TODO: Arrumar derivada
     
     x0=-1;
     precisao=0.001;
