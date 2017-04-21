@@ -3,7 +3,7 @@ function raiz = metodoNewtonRaphson()
     syms x;
     fx=(x^2)*sin(x)+cos(x);
     dfx=diff(fx,x);
-
+    
     %Estimativa inicial
     x0=-1;
     
