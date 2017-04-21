@@ -1,26 +1,30 @@
-%Encontra um zero da funcao fx dentro do intervalo [a,b].
 function raiz = metodoBissecao()
+    %Definição Das Equações
     syms x;
     fx=(x^2)*sin(x)+cos(x);
-    a = -2;
-    b = 2;
     
-    precisao = 0.01;
-    Nmax=15;
+    %Estimativa inicial
+    a=-1;
+    b=1;
     
+    %Critério de parada
+    precisao=0.01;
+    Nmax=15;    
     raiz=[];
     i=0;
+    
     while(true)
-        c = (a+b)/2;
+        c=(a+b)/2;
         
         if(subs(fx,c)*subs(fx,a)>0)
-            a = c;
+            a=c;
         else
-            b = c;
+            b=c;
         end   
         
         raiz=[raiz,c];
         i=i+1;
+        fprintf('E: %f - c: %f - I: %f\n',abs(subs(fx,c)), c,i);
         if((abs(subs(fx,c))<=precisao) || (i>=Nmax))
             break;
         end

@@ -1,27 +1,18 @@
-%f(x)= d(x)-x=0
-%d(x)=x
 function raiz = metodoIterativoLinear()
+    %Definição Das Equações
     syms x;
     fx=(x^2)*sin(x)+cos(x);
+    hx=sqrt(-cot(x));
     
-    %hx=sqrt(-cot(x));
-    %(csc^2(x))/(2 sqrt(-cot(x)))
+    %Estimativa inicial
+    x0=-1;
     
-    %hx=asin(-cos(x)/(x^2));
-    %-(-(2 cos(x))/x^3 - (sin(x))/x^2)/sqrt(1 - (cos^2(x))/x^4)
-    
-    hx=1/(cos((-(x^2)*sin(x))));
-    %-(-x^2 cos(x) - 2 x sin(x))/sqrt(1 - x^4 sin^2(x))
-    
-    %hx=(-cot(x)/x);
-    %(cot(x) + x csc^2(x))/x^2
-    
-    x0=-6;
+    %Critério de parada
     precisao=0.001;
-    Nmax=15;
-    
+    Nmax=15;    
     i=0;        
     raiz=[];
+    
     while(true)
         x=subs(hx,x0);
         E=abs(x-x0);
