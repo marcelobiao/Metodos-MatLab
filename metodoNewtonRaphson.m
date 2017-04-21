@@ -1,5 +1,6 @@
+%Metodo Newton Raphson
 function raiz = metodoNewtonRaphson()
-    %Definição Das Equações
+    %Definição Das Equacoes
     syms x;
     fx=(x^2)*sin(x)+cos(x);
     dfx=diff(fx,x);
@@ -7,7 +8,7 @@ function raiz = metodoNewtonRaphson()
     %Estimativa inicial
     x0=-1;
     
-    %Critério de parada
+    %Criterio de parada
     precisao=0.001;
     Nmax=15;
     i=0;

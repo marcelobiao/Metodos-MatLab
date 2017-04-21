@@ -1,5 +1,6 @@
+%Metodo Iterativo Linear
 function raiz = metodoIterativoLinear()
-    %Definição Das Equações
+    %Definição Das Equacoes
     syms x;
     fx=(x^2)*sin(x)+cos(x);
     hx=sqrt(-cot(x));
@@ -7,7 +8,7 @@ function raiz = metodoIterativoLinear()
     %Estimativa inicial
     x0=-1;
     
-    %Critério de parada
+    %Criterio de parada
     precisao=0.001;
     Nmax=15;    
     i=0;        

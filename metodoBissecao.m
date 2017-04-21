@@ -1,5 +1,6 @@
+%Metodo Bissecao
 function raiz = metodoBissecao()
-    %Definição Das Equações
+    %Definição Das Equacoes
     syms x;
     fx=(x^2)*sin(x)+cos(x);
     
@@ -7,7 +8,7 @@ function raiz = metodoBissecao()
     a=-1;
     b=1;
     
-    %Critério de parada
+    %Criterio de parada
     precisao=0.01;
     Nmax=15;    
     raiz=[];
