@@ -3,14 +3,14 @@ function raiz = metodoIterativoLinear()
     %Definição Das Equacoes
     syms x;
     fx=(x^2)*sin(x)+cos(x);
-    hx=sqrt(-cot(x));
-    
+    hx=asin(-cos(x)/(x^2));
+            
     %Estimativa inicial
-    x0=-2;
+    x0=-1;
     
     %Criterio de parada
     precisao=0.001;
-    Nmax=15;    
+    Nmax=12;    
     i=0;        
     raiz=[];
     
