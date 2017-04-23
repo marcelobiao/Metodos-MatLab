@@ -5,8 +5,8 @@ function raiz = metodoBissecao()
     fx=(x^2)*sin(x)+cos(x);
     
     %Estimativa inicial
-    a=-2;
-    b=2;
+    a=-1;
+    b=1;
     
     %Criterio de parada
     precisao=0.01;
