@@ -5,8 +5,8 @@ function raiz = metodoBissecao()
     fx=(x^2)*sin(x)+cos(x);
     
     %Estimativa inicial
-    a=-1;
-    b=1;
+    a=-2;
+    b=2;
     
     %Criterio de parada
     precisao=0.01;
@@ -25,7 +25,7 @@ function raiz = metodoBissecao()
         
         raiz=[raiz,c];
         i=i+1;
-        fprintf('E: %f - c: %f - I: %f\n',abs(subs(fx,c)), c,i);
+        fprintf('E: %f - c: %.5f - I: %f\n',abs(subs(fx,c)), c,i);
         if((abs(subs(fx,c))<=precisao) || (i>=Nmax))
             break;
         end

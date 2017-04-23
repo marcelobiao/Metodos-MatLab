@@ -11,9 +11,9 @@ function [raizBissecao, raizIteracao, raizNewton] = agregador()
     %Tabela das raizes
     %TODO: Arrumar raizes na tabela
     fprintf('new\n');
-    fprintf('RaizLi: %f\n',raizIteracao);
+    fprintf('RaizLi: %.5f\n',raizIteracao);
     fprintf('new\n');
-    fprintf('RaizBi: %f\n',raizBissecao);
+    fprintf('RaizBi: %.5f\n',raizBissecao);
     fprintf('new\n');
-    fprintf('RaizNewtonRaphson: %f\n',raizNewton);
+    fprintf('RaizNewtonRaphson: %.5f\n',raizNewton);
 end

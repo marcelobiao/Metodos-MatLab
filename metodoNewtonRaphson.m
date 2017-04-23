@@ -21,7 +21,7 @@ function raiz = metodoNewtonRaphson()
         i=i+1;
         
         raiz=[raiz,x];
-        fprintf('E: %f - x0: %f - I: %f\n',E, x0,i);
+        fprintf('E: %.5f - x0: %f - I: %f\n',E, x0,i);
         if((E<=precisao) || (i>=Nmax))
             break;
         end
