@@ -10,9 +10,11 @@ function raiz = metodoBissecao()
     
     %Criterio de parada
     precisao=0.01;
-    Nmax=15;    
-    raiz=[];
+    Nmax=12;    
     i=0;
+    
+    %Saida
+    raiz=[];
     
     while(true)
         c=(a+b)/2;
@@ -25,7 +27,7 @@ function raiz = metodoBissecao()
         
         raiz=[raiz,c];
         i=i+1;
-        fprintf('E: %f - c: %.5f - I: %f\n',abs(subs(fx,c)), c,i);
+        fprintf('I: %d; x0: %.5f; E: %.5f\n',i,c,abs(subs(fx,c)));
         if((abs(subs(fx,c))<=precisao) || (i>=Nmax))
             break;
         end

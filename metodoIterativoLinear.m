@@ -11,7 +11,9 @@ function raiz = metodoIterativoLinear()
     %Criterio de parada
     precisao=0.001;
     Nmax=12;    
-    i=0;        
+    i=0;
+    
+    %Saida
     raiz=[];
     
     while(true)
@@ -21,7 +23,7 @@ function raiz = metodoIterativoLinear()
         i=i+1;
        
         raiz=[raiz,x];
-        fprintf('E: %f - x0: %.5f - I: %f\n',E, x0,i);
+        fprintf('I: %d; \tx0: %.5f; \tE: %.5f\n',i,x0,E);
         if((E<=precisao) || (i>=Nmax))
             break;
         end

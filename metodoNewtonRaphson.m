@@ -10,8 +10,10 @@ function raiz = metodoNewtonRaphson()
     
     %Criterio de parada
     precisao=0.001;
-    Nmax=15;
+    Nmax=12;
     i=0;
+    
+    %Saida
     raiz=[];
     
     while(true)
@@ -21,7 +23,7 @@ function raiz = metodoNewtonRaphson()
         i=i+1;
         
         raiz=[raiz,x];
-        fprintf('E: %.5f - x0: %f - I: %f\n',E, x0,i);
+        fprintf('I: %d; \tx0: %.5f; \tE: %.5f\n',i,x0,E);
         if((E<=precisao) || (i>=Nmax))
             break;
         end
