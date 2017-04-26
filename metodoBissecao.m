@@ -27,8 +27,8 @@ function raiz = metodoBissecao()
         
         raiz=[raiz,c];
         i=i+1;
-        fprintf('I: %d; x0: %.5f; E: %.5f\n',i,c,abs(subs(fx,c)));
-        if((abs(subs(fx,c))<=precisao) || (i>=Nmax))
+        fprintf('I: %d; \tx0: %.5f; \tSeparação: %.5f\n',i,c,abs(a-b));
+        if((abs(a-b)<=precisao) || (i>=Nmax))
             break;
         end
     end
